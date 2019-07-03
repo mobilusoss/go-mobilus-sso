@@ -1,5 +1,8 @@
 # go-mobilus-sso
 
+[![Build Status](https://cloud.drone.io/api/badges/mobilusoss/go-mobilus-sso/status.svg)](https://cloud.drone.io/mobilusoss/go-mobilus-sso)
+[![codecov](https://codecov.io/gh/mobilusoss/go-mobilus-sso/branch/master/graph/badge.svg)](https://codecov.io/gh/mobilusoss/go-mobilus-sso)
+
 mobiSeries SSOを行うライブラリーです
 
 ## Marshal
