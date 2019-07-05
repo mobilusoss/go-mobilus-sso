@@ -92,8 +92,7 @@ func (this *MobilusSSO) decodeBase64(data string) ([]byte, error) {
 }
 
 func (this *MobilusSSO) encodeBase64(data []byte) string {
-	r := base64.URLEncoding.EncodeToString(data)
-	return strings.Replace(r, "=", "", -1)
+	return base64.URLEncoding.WithPadding(base64.NoPadding).EncodeToString(data)
 }
 
 func (this *MobilusSSO) paddingPKCS5(src []byte) []byte {
