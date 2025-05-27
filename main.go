@@ -22,6 +22,7 @@ type (
 		PlusID      string `json:"plusId"`
 		UserID      string `json:"userId"`
 		TenantID    string `json:"tenantId"`
+		DisplayName string `json:"displayName"`
 	}
 )
 
