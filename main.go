@@ -15,14 +15,14 @@ type (
 		Secret string
 	}
 	User struct {
-		Name        string `json:"name"`
-		PermitLevel int    `json:"permitLevel"`
-		Token       string `json:"token"`
-		DomainID    string `json:"domainId"`
-		PlusID      string `json:"plusId"`
-		UserID      string `json:"userId"`
-		TenantID    string `json:"tenantId"`
-		DisplayName string `json:"displayName"`
+		Name                  string `json:"name"`
+		PermitLevel           int    `json:"permitLevel"`
+		Token                 string `json:"token"`
+		DomainID              string `json:"domainId"`
+		PlusID                string `json:"plusId"`
+		UserID                string `json:"userId"`
+		TenantID              string `json:"tenantId"`
+		PermissionDisplayName string `json:"permissionDisplayName"`
 	}
 )
 
