@@ -10,13 +10,14 @@ mobiSeries SSOを行うライブラリーです
 ```golang
 sso := go_mobilus_sso.New(secret)
 token, err := sso.Marshal(go_mobilus_sso.User{
-    Name:        "テストマン",
-    PermitLevel: 0,
-    Token:       "thisistesttoken",
-    DomainID:    "adm",
-    PlusID:      "testman@example.com",
-    UserID:      "testman@example.com",
-    TenantID:    "mobilus",
+    Name:                  "テストマン",
+    PermitLevel:           0,
+    Token:                 "thisistesttoken",
+    DomainID:              "adm",
+    PlusID:                "testman@example.com",
+    UserID:                "testman@example.com",
+    TenantID:              "mobilus",
+    PermissionDisplayName: "管理者",
 })
 if err != nil {
     panic(err)

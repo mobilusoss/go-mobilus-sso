@@ -22,13 +22,14 @@ func TestMobilusSSO_Marshal(t *testing.T) {
 
 	t.Run("valid", func(t1 *testing.T) {
 		c, err := s.Marshal(User{
-			Name:        "テストマン",
-			PermitLevel: 0,
-			Token:       "thisistesttoken",
-			DomainID:    "adm",
-			PlusID:      "testman@example.com",
-			UserID:      "testman@example.com",
-			TenantID:    "mobilus",
+			Name:                  "テストマン",
+			PermitLevel:           0,
+			Token:                 "thisistesttoken",
+			DomainID:              "adm",
+			PlusID:                "testman@example.com",
+			UserID:                "testman@example.com",
+			TenantID:              "mobilus",
+			PermissionDisplayName: "管理者",
 		})
 		if err != nil {
 			t1.Fatal("marshal error", err)
@@ -69,6 +70,8 @@ func TestMobilusSSO_Unmarshal(t *testing.T) {
 			t1.Fatal("unmarshal error", "invalid userId", user.UserID)
 		case user.TenantID != "mobilus":
 			t1.Fatal("unmarshal error", "invalid tenantId", user.TenantID)
+		case user.PermissionDisplayName != "管理者":
+			t1.Fatal("unmarshal error", "invalid permissionDisplayName", user.PermissionDisplayName)
 		}
 	})
 	t.Run("invalid", func(t1 *testing.T) {
