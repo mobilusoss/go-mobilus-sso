@@ -42,4 +42,5 @@ if err != nil {
 // user.PlusID
 // user.UserID
 // user.TenantID
+// user.PermissionDisplayName
 ```
